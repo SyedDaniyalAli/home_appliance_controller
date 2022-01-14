@@ -37,7 +37,10 @@ dependencies:
   flutter_easyloading: ^3.0.3
   cloud_firestore: ^3.1.0
   intl: ^0.17.0
-
+  firebase_auth: ^3.3.5
+  google_sign_in: ^5.2.2
+  flutter_switch: ^0.3.2
+  speech_to_text: ^5.4.2
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -68,6 +71,8 @@ flutter_icons:
 
 # The following section is specific to Flutter.
 flutter:
+  assets:
+    - dev_assets/icon/
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

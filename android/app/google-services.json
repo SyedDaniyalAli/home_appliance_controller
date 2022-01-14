@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "219201978099",
+    "project_id": "home-appliance-controlle-75983",
+    "storage_bucket": "home-appliance-controlle-75983.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:219201978099:android:da76acbbef380a61d80186",
+        "android_client_info": {
+          "package_name": "com.home.appliance.controller.home_appliance_controller"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "219201978099-98vt8pvcj2msubbjvih2qd4u4410jmuo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.home.appliance.controller.home_appliance_controller",
+            "certificate_hash": "0d0bb5ae627ce054918fa31495109d78a394f889"
+          }
+        },
+        {
+          "client_id": "219201978099-ujpbbrgl4ko655bv1mqvrgq32iil98ki.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-Ut9L9v-JAnKw8O353uMqBvnyU-TyISo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "219201978099-ujpbbrgl4ko655bv1mqvrgq32iil98ki.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
