@@ -73,6 +73,7 @@ class MachineCard extends StatelessWidget {
                       child: Icon(
                         Icons.settings,
                         size: 35,
+                        color: Colors.blueGrey,
                       ),
                     ),
                   ],
