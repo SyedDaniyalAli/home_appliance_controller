@@ -33,29 +33,47 @@ class MachineCard extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Icon(
-                      FontAwesomeIcons.microchip,
-                      size: 35,
+                    Flexible(
+                      flex: 1,
+                      child: Icon(
+                        FontAwesomeIcons.microchip,
+                        size: 35,
+                      ),
                     ),
                     SizedBox(
                       width: 20,
                     ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Appliance Name: $machineName',
-                          style: TextStyle(fontWeight: FontWeight.bold),
-                        ),
-                        SizedBox(
-                          height: 5,
-                        ),
-                        Text(
-                          'Device ID: $deviceId',
-                          style: TextStyle(
-                              color: Colors.white, fontWeight: FontWeight.bold),
-                        ),
-                      ],
+                    Flexible(
+                      flex: 4,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Appliance Name: $machineName',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                          SizedBox(
+                            height: 5,
+                          ),
+                          Text(
+                            'Device ID: $deviceId',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      width: 70,
+                    ),
+                    Flexible(
+                      flex: 1,
+                      fit: FlexFit.tight,
+                      child: Icon(
+                        Icons.settings,
+                        size: 35,
+                      ),
                     ),
                   ],
                 ),
