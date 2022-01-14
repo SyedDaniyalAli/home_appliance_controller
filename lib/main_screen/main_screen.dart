@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
@@ -47,7 +45,8 @@ class _MainScreenState extends State<MainScreen> {
         print('main_screen resultListener : ${resultListener}');
         print('main_screen resultListener : ${resultListener.recognizedWords}');
         if (resultListener.isConfident(
-            threshold: SpeechRecognitionWords.confidenceThreshold)) {
+                threshold: SpeechRecognitionWords.confidenceThreshold) &&
+            resultListener.finalResult) {
           checkCommands('${resultListener.recognizedWords}');
         }
       });
@@ -218,7 +217,7 @@ class _MainScreenState extends State<MainScreen> {
         updateMachine(
             docRef: _deviceCollection.doc('${data["machineID"]}'),
             map: {
-              'state': '$state',
+              'state': state,
             });
       });
     }).whenComplete(
