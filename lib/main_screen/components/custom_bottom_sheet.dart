@@ -33,7 +33,7 @@ class _CustomBottomSheetState extends State<CustomBottomSheet> {
         .doc('$_machineID')
         .set({
           'uid': '${_user!.uid}', // John Doe
-          'machineName': _machineName,
+          'machineName': _machineName.toLowerCase(),
           'machineID': _machineID,
           'state': false,
         })

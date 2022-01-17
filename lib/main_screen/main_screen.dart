@@ -47,6 +47,7 @@ class _MainScreenState extends State<MainScreen> {
         if (resultListener.isConfident(
                 threshold: SpeechRecognitionWords.confidenceThreshold) &&
             resultListener.finalResult) {
+          EasyLoading.showToast('${resultListener.recognizedWords}');
           checkCommands('${resultListener.recognizedWords}');
         }
       });
@@ -141,7 +142,7 @@ class _MainScreenState extends State<MainScreen> {
                   deviceNames.add(data['machineName']);
                   return MachineCard(
                       deviceId: data['machineID'],
-                      machineName: data['machineName'],
+                      machineName: data['machineName'].toString().toUpperCase(),
                       onPressed: () {
                         Navigator.of(context).pushNamed(
                           MachineDetailsScreen.routeName,
@@ -206,6 +207,8 @@ class _MainScreenState extends State<MainScreen> {
       {required String deviceName, required bool state}) {
     final CollectionReference _deviceCollection =
         FirebaseFirestore.instance.collection('machines');
+    print("UserID: "+FirebaseAuth.instance.currentUser!.uid);
+    print("Device Name: " + deviceName);
     _deviceCollection
         .where('uid', isEqualTo: FirebaseAuth.instance.currentUser!.uid)
         .where('machineName', isEqualTo: '$deviceName')

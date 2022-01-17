@@ -38,7 +38,7 @@ class _MachineDetailsScreenState extends State<MachineDetailsScreen> {
                 print(element['machineID']);
                 setState(() {
                   machineID = element['machineID'];
-                  machineName = element['machineName'];
+                  machineName = element['machineName'].toString().toUpperCase();
                   machineState = element['state'];
                 });
               })
@@ -244,7 +244,7 @@ class _MachineDetailsScreenState extends State<MachineDetailsScreen> {
           updateMachine(
             docRef: machinesCollection.doc('$uid'),
             map: {
-              'machineName': CustomEditDialog.textData,
+              'machineName': CustomEditDialog.textData.toString().toLowerCase(),
             },
           ).onError(
             (error, stackTrace) {
